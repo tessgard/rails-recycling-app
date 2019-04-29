@@ -10,6 +10,26 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div>
+      <div class="nav">
+      
+        <p class='home-link'><%= link_to 'Home', root_path %></p>
+    
+      
+        <% if user_signed_in? %>
+            <p class='home-link'><%= link_to "Post new", new_product_path %></p>
+            <%#<p class='home-link'><%= link_to 'Dashboard',  </p>%>
+            <p class='home-link'><%= link_to 'Log out', destroy_user_session_path, method: :delete %></p>
+        
+        <% else %>
+          <p class='home-link'><%= link_to 'Log In', new_user_session_path %></p>
+          <p class='home-link'><%= link_to 'Sign Up', new_user_registration_path %></p>
+        <% end %>
+    </div>
+
+    <% flash.each do |key, value| %>
+      <%= value %>
+    <% end %>
+      <%= yield %>
   </body>
 </html>
