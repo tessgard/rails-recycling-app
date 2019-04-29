@@ -1,0 +1,12 @@
+<% @products.each_with_index do |product, index| %>
+                
+  <%= product.title %> - <%= product.category %> 
+  <%= product.quantity %>
+  <%= product.location %>
+  <%# add category image here %>
+
+  <%= link_to "show", product_path(product.id) %>
+
+  <p>___________________________________________________________</p>
+                
+<% end %>
