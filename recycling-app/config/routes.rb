@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  # devise_for :users
+  devise_for :users
 
   root "welcomes#index"
+  get '/', to: "welcomes#index"
 
   get "/products", to: "products#index", as: "products"
   post "/products", to: "products#create"
@@ -13,7 +14,6 @@ Rails.application.routes.draw do
   get "/products/:id/edit", to: "products#edit", as: "edit_product"
   delete "/products/:id", to: "products#delete"
 
-  # resources :charges
 
   
 end
