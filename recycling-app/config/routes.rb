@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   get "/business_dashboard", to:"welcomes#business_dashboard"
   get "/user_dashboard", to:"welcomes#people_dashboard"
 
+  get "/login", to:"welcomes#login"
+  get "/signup", to:"welcomes#signup"
+
+
 
 
 end
