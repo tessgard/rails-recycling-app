@@ -18,12 +18,13 @@
       
         <% if user_signed_in? %>
             <p class="nav-item3"><%= link_to "Post new", new_product_path %></p>
-            <%#<p class='home-link'><%= link_to 'Dashboard',  </p>%>
             <p class="nav-item3"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></p>
         
         <% else %>
-          <p class="nav-item3"><%= link_to 'Log In', new_user_session_path %></p>
-          <p class="nav-item3"><%= link_to 'Sign Up', new_user_registration_path %></p>
+          <p class="nav-item3"><%= link_to 'Log In as people', new_user_session_path %></p>
+          <p class="nav-item3"><%= link_to 'Log In as business', new_business_session_path %></p>
+          <p class="nav-item3"><%= link_to 'Sign Up as people', new_user_registration_path %></p>
+          <p class="nav-item3"><%= link_to 'Sign Up as business', new_business_registration_path %></p>
         <% end %>
     </div>
 
