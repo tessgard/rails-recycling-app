@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get "/products/:id/edit", to: "products#edit", as: "edit_product"
   delete "/products/:id", to: "products#delete"
 
+  get "/business_dashboard", to: "welcomes#business_dashboard", as: "dashboard"
+  get "/people_dashboard", to: "welcomes#people_dashboard", as: "my_dashboard"
 
-  
 end
