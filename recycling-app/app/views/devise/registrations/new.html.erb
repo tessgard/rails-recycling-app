@@ -18,9 +18,16 @@
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %><br/><br/>
   </div>
 
+  <div class="field">
+  <%= f.label :User_role %><br />
+  <%= check_box_tag(:people) %>
+  <%= label_tag(:people, "People") %>
+   <%= check_box_tag(:business) %>
+  <%= label_tag(:business, "Business") %><br/><br/>
+  </div>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
