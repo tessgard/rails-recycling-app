@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
-class [users]::SessionsController < Devise::SessionsController
+class Businesses::SessionsController < Devise::SessionsController
+  include Accessible
   # before_action :configure_sign_in_params, only: [:create]
-  raise
+
   # GET /resource/sign_in
   # def new
   #   super

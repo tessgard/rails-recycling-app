@@ -18,19 +18,14 @@
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %><br/><br/>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
-  <%= f.label :User_role %><br />
-  <%= radio_button_tag(:user, "People") %>
-  <%= label_tag(:user_people, "People") %>
-   <%= radio_button_tag(:user, "business") %>
-  <%= label_tag(:user_business, "Business") %><br/><br/>
-  </div>
+ 
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= render "users/shared/links" %>

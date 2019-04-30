@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: 'users/sessions' }
+  devise_for :businesses, path:'businesses', controllers: { sessions: "businesses/sessions" }
+  devise_for :users, path: 'users', controllers: { sessions: "users/sessions"}
 
   root "welcomes#index"
   get '/', to: "welcomes#index"
@@ -13,7 +14,8 @@ Rails.application.routes.draw do
   patch "/products/:id", to: "products#update"
   get "/products/:id/edit", to: "products#edit", as: "edit_product"
   delete "/products/:id", to: "products#delete"
-
+  get "/business_dashboard", to:"welcomes#business_dashboard"
+  get "/user_dashboard", to:"welcomes#people_dashboard"
 
   
 end
