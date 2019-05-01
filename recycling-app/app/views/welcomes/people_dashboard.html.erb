@@ -2,6 +2,14 @@
 <div class="user-dash-main-container">
 	<div class="user-dash-left-container">
 	<p>Current items posted</p>
+	<% @products.each_with_index do |product, index| %>
+                      
+        <%= product.category %> - <%= product.category %> 
+        <%= product.quantity %>
+        <%= product.location %>
+
+        <%= link_to "show", product_path(product.id) %>   <br/><br/>             
+      <% end %> 
 	</div>
 	<div class="user-dash-right-container">
 		<div class="user-dash-right-top">
