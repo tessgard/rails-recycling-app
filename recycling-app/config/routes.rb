@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :businesses, path: 'businesses', controllers: { sessions: "businesses/sessions"}
-  devise_for :users, path: 'users', controllers: { sessions: "users/sessions"}
+  devise_for :users, path: 'users', controllers: { sessions: "users/sessions", registrations: "users/registrations"}
+
 
 
 
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
 
   get "/login", to:"welcomes#login"
   get "/signup", to:"welcomes#signup"
+  get "/my_dashboard", to:"welcomes#people_dashboard"
+  get "/users", to: "welcomes#people_dashboard"
 
 
 
