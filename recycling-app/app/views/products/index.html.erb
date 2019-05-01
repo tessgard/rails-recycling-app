@@ -1,19 +1,24 @@
 <div class="marketplace-main-container">
 
   <div class="marketplace-content">
-    <h1>Marketplace</p>
 
-    <div class="marketplace-product-card">
+    <h1>Marketplace</h1>
+  </div>
+    <div class="all-items-container">
+
+    
 
       <% @products.each_with_index do |product, index| %>
-                      
-        <%= product.title %> - <%= product.category %> 
-        <%= product.quantity %>
-        <%= product.location %>
+        <div class="marketplace-product-card">   
+        <%= image_tag product.uploaded_image, class: 'marketplace-image-size' %>           
+        <p><%= product.category %></p>
+        <p>location:<%= product.location %></p>
 
-        <%= link_to "show", product_path(product.id) %>                
+        <%= link_to "show details", product_path(product.id) %>  
+        </div>              
       <% end %>
     </div>
-  </div>
+    
+  
 
 </div>
