@@ -6,13 +6,18 @@ class ProductsController < ApplicationController
 
   def create
       @product = Product.new(product_params)
-
-      @product.save
+      if @product.save
+        redirect_to @product
+      else
+        render 'new'
+      end
+       
             
   end
 
   def new
       @product = Product.new
+       
   end
 
   def show
@@ -46,6 +51,6 @@ class ProductsController < ApplicationController
 
   private
     def product_params
-      params.permit(:title, :address, :description, :food_type, :uploaded_image)
+      params.permit(:category, :quantity, :location,  :uploaded_image)
     end
 end
