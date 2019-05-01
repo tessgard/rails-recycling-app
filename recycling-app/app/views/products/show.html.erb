@@ -14,15 +14,19 @@
     <p>Location: <%= @product.location %></p>
 
     <%= form_for @transaction, url: transactions_path do |f| %>
-    <input name="business_id" type="hidden" value="<%= current_user.id %>"> 
     <input name="product_id" type="hidden" value="<%= @product.id %>"> 
     <input name="user_id" type="hidden" value="<%= @product.user.id %>"> 
+    <% if id = current_user %>
+    <input name="user_id" type="hidden" value="<%= current_user.id %>"> 
+    <% else %>
+    <input name="business_id" type="hidden" value="<%= current_business.id %>"> 
+    <%= f.submit "request" %>
+    <% end %>
 
-      <%= f.submit "request" %>
+
+      
       <%end %>
 
-
-    <div class="gen-button"><%= button_to "request" %></div>
 
     <br>
     <%= link_to "< Back to list", :back %>

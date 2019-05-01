@@ -16,8 +16,11 @@
     </div>
     <% end %>
     
-<label for="category">Category</label> 
-    <input type="text" name="category" id="category"/><br/><br/>
+    <div class="form_row">
+        <label for="category">Category:</label><br/>
+        <br><%= radio_button_tag 'category', 'Bottles', true %> Bottles 
+        <br><%= radio_button_tag 'category', 'Cardboards' %> Cardboards <br/><br/>
+    </div>
 
     <label for="quantity">Quantity</label>
     <input type="text" name="quantity" id="quantity"/><br/><br/>
@@ -26,8 +29,16 @@
     <input type ="file" name = "uploaded_image" accept ="image/jpg">
     <br/><br/>
 
-    <label for="location">Location</label>
-    <input type="text" name="location" id="location" /><br/><br/>
+   <div class="form_row">
+    <label for="location">Location:</label><br/>
+    <br><%= radio_button_tag 'location', 'New South Wales', true %> New South Wales
+    <br><%= radio_button_tag 'location', 'Queensland ' %> Queensland 
+    <br><%= radio_button_tag 'location', 'South Australia' %> South Australia
+    <br><%= radio_button_tag 'location', 'Tasmania' %> Tasmania
+    <br><%= radio_button_tag 'location', 'Victoria' %> Victoria
+    <br><%= radio_button_tag 'location', 'Western Australia' %> Western Australia
+
+    </div>
 
     <input type="submit" value="Create" />
     
