@@ -5,6 +5,7 @@
       <h2>Sign up</h2>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
         <%= render "devise/shared/error_messages", resource: resource %>
 
         <div class="field">
@@ -27,11 +28,14 @@
 
         <div class="submit-button-container">
         <div class="actions">
-          <div class="sign-up-submit-button"><%= f.submit "submit" %></div>
+          <div class="sign-up-submit-button"><%= f.submit "submit" %>
+          </div>
+          <input type="hidden" name="target" value="/dashboard"/>
         </div>
         </div>
       <% end %>
     </div>
   </div>
 </div>
+
 

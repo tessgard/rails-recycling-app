@@ -17,7 +17,7 @@
     
       
         <% if user_signed_in? %>
-            <p class="nav-item3"><%= link_to "Post new", new_product_path %></p>
+
             <p class="nav-item3"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></p>
         
         <% else %>
