@@ -1,17 +1,20 @@
 class TransactionsController < ApplicationController
   def create
-    @transaction = transaction.new(transaction_params)
+    @transaction = Transaction.new
+    @transaction.user_id = params[:user_id]
+    @transaction.business_id = params[:business_id]
+    @transaction.product_id = params[:product_id]
 
     @transaction.save
-          
+
 end
 
 def new
-    @transaction = transaction.new
+    @transaction = Transaction.new
 end
 
 def show
-    @transaction = transaction.find(params[:id])
+    @transaction = Transaction.find(params[:id])
 end
 
 def checkout

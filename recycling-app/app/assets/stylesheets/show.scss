@@ -1,0 +1,21 @@
+.image-size {
+  width: 300px;
+  border: 1pt solid green;
+
+}
+
+.show-main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.show-content {
+  width: 30%;
+  height: 80%;
+  border: 10pt solid green;
+  padding: 30px 30px;
+
+}

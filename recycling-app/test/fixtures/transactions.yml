@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  people: one
+  business: one
+  product: one
+
+two:
+  people: two
+  business: two
+  product: two

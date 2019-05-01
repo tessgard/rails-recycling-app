@@ -3,18 +3,33 @@
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
-align-items: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .marketplace-content {
   display: flex;
+  
+}
+
+.all-items-container {
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
 }
 
 .marketplace-product-card {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 300px;
   border: 1pt solid green;
-  padding: 5px 5px;
+  padding: 10px 10px;
+  margin: 10px;
+  
 }
+
+.marketplace-image-size{
+  size: 120px;
+  height: 120px;
+}
+

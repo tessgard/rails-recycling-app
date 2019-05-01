@@ -1,15 +1,32 @@
-<h3>Category</h3>
-<h3><%= @product.category %></h3>
+<div class="show-main-container">
+  <div class="show-content">
 
-<h3>Quantity</h3>
-<p><%= @product.quantity %></p>
-<% if @product.uploaded_image.attached? %>
-  <%= image_tag @product.uploaded_image, class: 'image-size' %>
-<% else %>
-  <p>No image for this product</p>
-<% end %>
+    
+    <h3>Details</h3>
+      <% if @product.uploaded_image.attached? %>
+            <%= image_tag @product.uploaded_image, class: 'image-size' %>
+          <% else %>
+            <p>No image for this product</p>
+          <% end %>
 
-<h3>Location</h3>
-<p><%= @product.location %></p>
+    <p>category: <%= @product.category %></p>
+    <p>Quantity: <%= @product.quantity %></p>
+    <p>Location: <%= @product.location %></p>
 
-<%= link_to "Back", :back %>
+    <%= form_for @transaction, url: transactions_path do |f| %>
+    <input name="business_id" type="hidden" value="<%= current_user.id %>"> 
+    <input name="product_id" type="hidden" value="<%= @product.id %>"> 
+    <input name="user_id" type="hidden" value="<%= @product.user.id %>"> 
+
+      <%= f.submit "request" %>
+      <%end %>
+
+
+    <div class="gen-button"><%= button_to "request" %></div>
+
+    <br>
+    <%= link_to "< Back to list", :back %>
+
+  </div>
+
+</div>
