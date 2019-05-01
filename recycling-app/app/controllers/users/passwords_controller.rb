@@ -19,10 +19,11 @@ class Users::PasswordsController < Devise::PasswordsController
   # PUT /resource/password
   # def update
   #   super
+  #   # puts "hello from update"
   # end
 
   # protected
-
+  
   # def after_resetting_password_path_for(resource)
   #   super(resource)
   # end

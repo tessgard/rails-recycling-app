@@ -1,0 +1,21 @@
+<div class="user-dash-main-container">
+	<div class="user-dash-left-container">
+  <p>Past orders</p>
+	</div>
+	<div class="user-dash-right-container">
+		<div class="user-dash-right-top">
+  
+    <h3><%= link_to 'Edit account details', edit_business_registration_path %></h3>
+		<p>Edit your email address or reset your password</p>
+		<div class="delete-button"><%= button_to "edit", edit_business_registration_path, method: :get %></div>
+
+
+
+		</div>
+		<div class="user-dash-right-bottom">
+		<h3>cancel my account</h3>
+    <p>no longer using your account?</p>
+      <div class="delete-button"><%= button_to "delete", business_registration_path, data: { confirm: "Are you sure?" }, method: :delete %></div>
+		</div>
+	</div>
+</div>
