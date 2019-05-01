@@ -14,7 +14,7 @@
     <p>Location: <%= @product.location %></p>
 
     <%= form_for @transaction, url: transactions_path do |f| %>
-    <input name="business_id" type="hidden" value="<%= current_user.id %>"> 
+    <input name="business_id" type="hidden" value="<%= current_business.id %>"> 
     <input name="product_id" type="hidden" value="<%= @product.id %>"> 
     <input name="user_id" type="hidden" value="<%= @product.user.id %>"> 
 
