@@ -1,30 +1,30 @@
 class ProductsController < ApplicationController
   authorize_resource
   def index
-      @products = product.all
+      @products = Product.all
   end
 
   def create
-      @product = product.new(product_params)
+      @product = Product.new(product_params)
 
       @product.save
             
   end
 
   def new
-      @product = product.new
+      @product = Product.new
   end
 
   def show
-      @product = product.find(params[:id])
+      @product = Product.find(params[:id])
   end
 
   def edit
-    @product = product.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def update
-        @product = product.find(params[:id])
+        @product = Product.find(params[:id])
 
         if @product.update(product_params)
           redirect_to @product
@@ -34,14 +34,14 @@ class ProductsController < ApplicationController
   end
 
   def delete
-    @product = product.find(params[:id])
+    @product = Product.find(params[:id])
     @product.destroy
    
     redirect_to products_path
   end
 
   def cart
-    @product = product.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   private
