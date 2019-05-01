@@ -39,14 +39,14 @@ class ProductsController < ApplicationController
   end
 
   def delete
-    @product = product.find(params[:id])
+    @product = Product.find(params[:id])
     @product.destroy
    
     redirect_to products_path
   end
 
   def cart
-    @product = product.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   private
