@@ -1,12 +1,19 @@
-<% @products.each_with_index do |product, index| %>
-                
-  <%= product.title %> - <%= product.category %> 
-  <%= product.quantity %>
-  <%= product.location %>
-  <%# add category image here %>
+<div class="marketplace-main-container">
 
-  <%= link_to "show", product_path(product.id) %>
+  <div class="marketplace-content">
+    <h1>Marketplace</p>
 
-  <p>___________________________________________________________</p>
-                
-<% end %>
+    <div class="marketplace-product-card">
+
+      <% @products.each_with_index do |product, index| %>
+                      
+        <%= product.title %> - <%= product.category %> 
+        <%= product.quantity %>
+        <%= product.location %>
+
+        <%= link_to "show", product_path(product.id) %>                
+      <% end %>
+    </div>
+  </div>
+
+</div>

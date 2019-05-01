@@ -1,5 +1,13 @@
-<p><%= link_to 'Sign Up as people', new_user_registration_path %></p>
-if you have things to recycle, sign up as a user and post your items
-
-<p><%= link_to 'Sign Up as business', new_business_registration_path %></p>
-if you need to source recycled materials, sign up as a business user and browse available items
+<div class="login-main-container">
+  <div class="login-left-container">
+  <p><%= link_to 'I am an individual wanting to post items available to recycle', new_user_registration_path %></p>
+  </div>
+  <div class="login-mid-container">
+    <div class="login-graphic">
+    <p>Sign up</p>
+    </div>
+  </div>
+  <div class="login-right-container">
+  <p><%= link_to 'I am a business looking to source some recycled raw materials', new_business_registration_path %></p>
+  </div>
+</div>

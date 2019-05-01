@@ -1,7 +1,14 @@
-<p><%= link_to 'Log In as people', new_user_session_path %></p>
 
-if you have things to recycle, sign up as a user and post your items
-
-<p><%= link_to 'Log In as business', new_business_session_path %></p>
-
-if you need to source recycled materials, sign up as a business user and browse available items
+<div class="login-main-container">
+  <div class="login-left-container">
+  <p><%= link_to 'Individual', new_user_session_path %></p>
+  </div>
+  <div class="login-mid-container">
+    <div class="login-graphic">
+    <p>Log in</p>
+    </div>
+  </div>
+  <div class="login-right-container">
+  <p><%= link_to 'Business', new_business_session_path %></p>
+  </div>
+</div>
