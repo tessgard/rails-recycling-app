@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(version: 2019_05_01_063431) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "transactions", force: :cascade do |t|
@@ -80,6 +82,7 @@ ActiveRecord::Schema.define(version: 2019_05_01_063431) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "products", "users"
   add_foreign_key "transactions", "businesses"
   add_foreign_key "transactions", "products"
   add_foreign_key "transactions", "users"
