@@ -1,0 +1,35 @@
+<h1>Create A New Post</h1>
+<form action="<%= products_path %>" method="POST" enctype="multipart/form-data" >
+    <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+
+      <% if @product.errors.any? %>
+    <div id="error_explanation">
+        <h2>
+        <%= pluralize(@product.errors.count, "error") %> prohibited
+        this article from being saved:
+        </h2>
+        <ul>
+        <% @product.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+        </ul>
+    </div>
+    <% end %>
+    
+    <label for="category">Category</label> 
+    <input type="text" name="category" id="category"/><br/><br/>
+
+    <label for="quantity">Quantity</label>
+    <input type="text" name="quantity" id="quantity"/><br/><br/>
+
+    <label> Image upload</label>
+    <input type ="file" name = "uploaded_image" accept ="image/jpg">
+    <br/><br/>
+
+    <label for="location">Location</label>
+    <input type="text" name="location" id="location" /><br/><br/>
+
+    <input type="submit" value="Create" />
+    
+    
+</form>

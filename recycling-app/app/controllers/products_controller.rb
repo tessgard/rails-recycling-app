@@ -1,30 +1,35 @@
 class ProductsController < ApplicationController
   authorize_resource
   def index
-      @products = product.all
+      @products = Product.all
   end
 
   def create
-      @product = product.new(product_params)
-
-      @product.save
+      @product = Product.new(product_params)
+      if @product.save
+        redirect_to @product
+      else
+        render 'new'
+      end
+       
             
   end
 
   def new
-      @product = product.new
+      @product = Product.new
+       
   end
 
   def show
-      @product = product.find(params[:id])
+      @product = Product.find(params[:id])
   end
 
   def edit
-    @product = product.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def update
-        @product = product.find(params[:id])
+        @product = Product.find(params[:id])
 
         if @product.update(product_params)
           redirect_to @product
@@ -46,6 +51,6 @@ class ProductsController < ApplicationController
 
   private
     def product_params
-      params.permit(:title, :address, :description, :food_type, :uploaded_image)
+      params.permit(:category, :quantity, :location,  :uploaded_image)
     end
 end
