@@ -19,27 +19,38 @@
 
 }
 
-.marketplace-product-card {
+.marketplace-product-card-image {
   width: 200px;
-  height: 250px;
-  border: 1pt solid green;
-  padding: 10px 10px;
-  margin: 10px;
+  height: 310px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .marketplace-image-size{
-  max-height: 100%;
-  width: auto;
+  width: 190px;
 }
 
-.image-box {
+.card-top-box {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 120px;
-  width: 120px;
+  justify-content: center;
+  align-items: center;
+}
+.marketplace-card {
+  width: 210px;
+  height: 410px;
+  background: green;
+  color: white;
+  margin: 10px 10px;
+  border: 1pt solid green;
+  a {
+    color: white;
+  }
+}
+
+.card-info {
+  width: 90%;
+  padding-left: 10px;
+  font-size: 10pt;
 }

@@ -10,14 +10,22 @@
 
   <div class="welcome-bottom-container">
     <% @products.each_with_index do |product, index| %>
-        <div class="marketplace-product-card">   
-        <div class="image-box"><%= image_tag "#{product.find_image_name}" , class: 'marketplace-image-size' %></div>      
-        <p><%= product.category %></p>
-        <p>location:<%= product.location %></p>
+        <div class="marketplace-card">
+        <div class="card-top-box">
+        <div class="marketplace-product-card-image">   
+        <%= image_tag "#{product.find_image_name}" , class: 'marketplace-image-size' %>
+        </div>
+        </div>
 
-        <%= link_to "show details", product_path(product.id) %>  
+        <div class="card-info">
+        <p><%= product.category %> in : <%= product.location %></p> 
+
+        <div class="gen-button-white"><%= button_to "details", product_path(product.id), method: :get %></div>
+
+        </div>
+
         </div>              
-    <% end %>
+      <% end %>
 
 
   </div>
