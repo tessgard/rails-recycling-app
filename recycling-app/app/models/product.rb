@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   has_one_attached :uploaded_image
   belongs_to :user
 
+
   def find_image_name
       if self.category == "Glass"
         image_name = "glass.jpg"
@@ -20,4 +21,5 @@ class Product < ApplicationRecord
       end
       image_name
   end
+
 end

@@ -11,11 +11,11 @@ class WelcomesController < ApplicationController
   end 
   def business_dashboard
     @business = current_business
-    @products = Product.where(business_id: current_business.id)
+    
+    @transactions = Transaction.where(business_id: current_business.id)
   end
 
   def create
-    raise
     redirect_to my_dashboard_path
     super
   end
