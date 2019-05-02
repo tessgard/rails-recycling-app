@@ -1,15 +1,6 @@
 class WelcomesController < ApplicationController
   def index
     @products = Product.all.sample(5)
-    @image_name = ''
-
-    @products.each do |product|
-      if product.category == "Glass"
-        @image_name = "glass.jpg"
-      elsif product.category == "Cardboards"
-        @image_name = "cardboard.jpg"
-      end
-    end
 
   end
 
