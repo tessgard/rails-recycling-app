@@ -2,6 +2,14 @@ class ProductsController < ApplicationController
   authorize_resource
   def index
       @products = Product.all
+
+      @products.each do |product|
+        if product.category == "Glass"
+          @image_name = "glass.jpg"
+        elsif product.category == "Cardboards"
+          @image_name = "cardboard.jpg"
+        end
+      end
   end
 
   def create

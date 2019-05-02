@@ -22,3 +22,55 @@
    text-decoration: none;
    color: green;
  }
+
+ .gen-button input {
+  margin-top: 10px;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: green;
+  border: 1pt solid green;
+  padding: 7px 7px;
+  font-size: 13pt;
+}
+
+.gen-button input a {
+    color: green;
+    text-decoration: none;
+}
+
+.button-image-upload {
+  width: 40px;
+}
+
+.button-image-upload input{
+  margin-top: 10px;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: green;
+  border: 1pt solid green;
+  padding: 7px 7px;
+  font-size: 13pt;
+  width: 230px;
+
+}
+
+.gen-button-white input {
+  margin-top: 10px;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  border: 1pt solid white;
+  padding: 7px 7px;
+  font-size: 13pt;
+}
+
+.gen-button-white input a {
+    color: white;
+    text-decoration: none;
+}

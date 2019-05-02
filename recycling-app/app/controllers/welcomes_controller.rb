@@ -1,7 +1,10 @@
 class WelcomesController < ApplicationController
   def index
+    @products = Product.all.sample(5)
 
   end
+
+
   def people_dashboard 
     @user = current_user
     @products = Product.where(user_id: current_user.id)
@@ -16,4 +19,5 @@ class WelcomesController < ApplicationController
     redirect_to my_dashboard_path
     super
   end
+
 end

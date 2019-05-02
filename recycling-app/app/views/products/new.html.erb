@@ -1,46 +1,56 @@
-<h1>Create A New Post</h1>
-<form action="<%= products_path %>" method="POST" enctype="multipart/form-data" >
-    <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+<div class="shownew-main-container">
+  <div class="shownew-content">
 
-      <% if @product.errors.any? %>
-    <div id="error_explanation">
-        <h2>
-        <%= pluralize(@product.errors.count, "error") %> prohibited
-        this article from being saved:
-        </h2>
-        <ul>
-        <% @product.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
+    <h3>Post a new item</h3>
+    <form action="<%= products_path %>" method="POST" enctype="multipart/form-data" >
+        <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+
+        <% if @product.errors.any? %>
+        <div id="error_explanation">
+            <h2>
+            <%= pluralize(@product.errors.count, "error") %> prohibited
+            this article from being saved:
+            </h2>
+            <ul>
+            <% @product.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+            </ul>
+        </div>
         <% end %>
-        </ul>
-    </div>
-    <% end %>
-    
+        
+        <div class="form_row">
+            <label for="category">Category:</label><br/>
+            <br><%= radio_button_tag 'category', 'Glass', true %> Glass
+            <br><%= radio_button_tag 'category', 'Cardboard' %> Paper or Cardboard
+            <br><%= radio_button_tag 'category', 'Textile' %> Textile
+            <br><%= radio_button_tag 'category', 'PET Plastic' %> PET plastic
+            <br><%= radio_button_tag 'category', 'Batteries' %> Batteries
+            <br><%= radio_button_tag 'category', 'Alluminium' %> Alluminium
+        </div>
+    <br>
+        <label for="quantity">weight in kg</label>
+        <input type="number" name="quantity" id="quantity"/><br/><br/>
+
+        <label> Image upload</label>
+        <div class="button-image-upload"><input type ="file" name = "uploaded_image" accept ="image/jpg"></div>
+        <br/><br/>
+
     <div class="form_row">
-        <label for="category">Category:</label><br/>
-        <br><%= radio_button_tag 'category', 'Bottles', true %> Bottles 
-        <br><%= radio_button_tag 'category', 'Cardboards' %> Cardboards <br/><br/>
-    </div>
+        <label for="location">Location:</label><br/>
+        <br><%= radio_button_tag 'location', 'New South Wales', true %> NSW
+        <br><%= radio_button_tag 'location', 'Queensland ' %> QLD 
+        <br><%= radio_button_tag 'location', 'South Australia' %> SA
+        <br><%= radio_button_tag 'location', 'Tasmania' %> TAS
+        <br><%= radio_button_tag 'location', 'Victoria' %> VIC
+        <br><%= radio_button_tag 'location', 'Western Australia' %> WA
 
-    <label for="quantity">Quantity</label>
-    <input type="text" name="quantity" id="quantity"/><br/><br/>
+        </div>
 
-    <label> Image upload</label>
-    <input type ="file" name = "uploaded_image" accept ="image/jpg">
-    <br/><br/>
+        <div class="gen-button"><input type="submit" value="Submit" /></div>
 
-   <div class="form_row">
-    <label for="location">Location:</label><br/>
-    <br><%= radio_button_tag 'location', 'New South Wales', true %> New South Wales
-    <br><%= radio_button_tag 'location', 'Queensland ' %> Queensland 
-    <br><%= radio_button_tag 'location', 'South Australia' %> South Australia
-    <br><%= radio_button_tag 'location', 'Tasmania' %> Tasmania
-    <br><%= radio_button_tag 'location', 'Victoria' %> Victoria
-    <br><%= radio_button_tag 'location', 'Western Australia' %> Western Australia
+    </form>
 
-    </div>
+ </div>
 
-    <input type="submit" value="Create" />
-    
-    
-</form>
+</div>
