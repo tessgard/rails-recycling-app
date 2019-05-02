@@ -14,22 +14,32 @@
 
 .all-items-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 
 }
 
 .marketplace-product-card {
-  width: 250px;
-  height: 300px;
+  width: 200px;
+  height: 250px;
   border: 1pt solid green;
   padding: 10px 10px;
   margin: 10px;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+
 
 .marketplace-image-size{
-  size: 120px;
-  height: 120px;
+  max-height: 100%;
+  width: auto;
 }
 
+.image-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 120px;
+  width: 120px;
+}
