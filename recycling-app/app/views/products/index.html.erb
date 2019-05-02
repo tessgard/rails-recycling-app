@@ -10,13 +10,14 @@
 
       <% @products.each_with_index do |product, index| %>
         <div class="marketplace-product-card">   
-        <div class="image-box"><%= image_tag product.uploaded_image, class: 'marketplace-image-size' %></div>      
+        <div class="image-box"><%= image_tag "#{product.find_image_name}" , class: 'marketplace-image-size' %></div>      
         <p><%= product.category %></p>
         <p>location:<%= product.location %></p>
 
         <%= link_to "show details", product_path(product.id) %>  
         </div>              
       <% end %>
+
     </div>
     
   
