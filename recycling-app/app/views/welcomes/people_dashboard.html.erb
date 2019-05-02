@@ -1,15 +1,20 @@
 
 <div class="user-dash-main-container">
 	<div class="user-dash-left-container">
-	<p>Current items posted</p>
-	<% @products.each_with_index do |product, index| %>
-                      
-        <%= product.category %> - <%= product.category %> 
-        <%= product.quantity %>
-        <%= product.location %>
+		<p>Current items posted</p>
+			<div class="current-items-container">
+			
+			<% @products.each_with_index do |product, index| %>
+					<div class="current-items-card">
+						<div class="image-box"><%= image_tag product.uploaded_image, class: 'marketplace-image-size' %></div>
+						<p><%= product.category %></p>
+						<p><%= product.quantity %></p>
+						<p><%= product.location %></p>
 
-        <%= link_to "show", product_path(product.id) %>   <br/><br/>             
-      <% end %> 
+						<%= link_to "show", product_path(product.id) %>   <br/><br/> 
+					</div>            
+					<% end %> 
+			</div>
 	</div>
 	<div class="user-dash-right-container">
 		<div class="user-dash-right-top">

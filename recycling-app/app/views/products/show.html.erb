@@ -13,18 +13,15 @@
     <p>Quantity: <%= @product.quantity %></p>
     <p>Location: <%= @product.location %></p>
 
+    <% if business_signed_in? %>
     <%= form_for @transaction, url: transactions_path do |f| %>
     <input name="product_id" type="hidden" value="<%= @product.id %>"> 
     <input name="user_id" type="hidden" value="<%= @product.user.id %>"> 
-    <% if id = current_user %>
-    <input name="user_id" type="hidden" value="<%= current_user.id %>"> 
-    <% else %>
     <input name="business_id" type="hidden" value="<%= current_business.id %>"> 
-    <%= f.submit "request" %>
+    <div class="gen-button"><%= f.submit "request" %></div>
     <% end %>
 
 
-      
       <%end %>
 
 
