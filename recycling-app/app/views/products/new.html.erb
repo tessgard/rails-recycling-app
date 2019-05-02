@@ -18,12 +18,16 @@
     
     <div class="form_row">
         <label for="category">Category:</label><br/>
-        <br><%= radio_button_tag 'category', 'Bottles', true %> Bottles 
-        <br><%= radio_button_tag 'category', 'Cardboards' %> Cardboards <br/><br/>
+        <br><%= radio_button_tag 'category', 'Glass', true %> Glass
+        <br><%= radio_button_tag 'category', 'Cardboard' %> Paper or Cardboard
+        <br><%= radio_button_tag 'category', 'Textile' %> Textile
+        <br><%= radio_button_tag 'category', 'PET Plastic' %> PET plastic
+        <br><%= radio_button_tag 'category', 'Batteries' %> Batteries
+        <br><%= radio_button_tag 'category', 'Alluminium' %> Alluminium
     </div>
-
-    <label for="quantity">Quantity</label>
-    <input type="text" name="quantity" id="quantity"/><br/><br/>
+<br>
+    <label for="quantity">weight in kg</label>
+    <input type="number" name="quantity" id="quantity"/><br/><br/>
 
     <label> Image upload</label>
     <input type ="file" name = "uploaded_image" accept ="image/jpg">
