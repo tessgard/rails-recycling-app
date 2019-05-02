@@ -81,3 +81,38 @@ a {
   flex-wrap: wrap;
 }
 
+.marketplace-product-card-image {
+  width: 200px;
+  height: 310px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.marketplace-image-size{
+  width: 190px;
+}
+
+.card-top-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-dash-card {
+  width: 210px;
+  height: 410px;
+  background: white;
+  color: green;
+  margin: 10px 10px;
+  border-bottom: 1pt solid green;
+  a {
+    color: green;
+  }
+}
+
+.card-info {
+  width: 90%;
+  padding-left: 10px;
+  font-size: 10pt;
+}
