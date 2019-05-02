@@ -1,6 +1,12 @@
 <div class="user-dash-main-container">
 	<div class="user-dash-left-container">
   <p>Past orders</p>
+	<% @transactions.each_with_index do |transaction, index| %>
+           
+          <%= transaction.product_id %>
+				<%= link_to "show", transaction_path(transaction.id) %>   <br/><br/>  
+
+      <% end %> 
 	</div>
 	<div class="user-dash-right-container">
 		<div class="user-dash-right-top">

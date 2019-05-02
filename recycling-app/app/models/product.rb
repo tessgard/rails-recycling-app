@@ -4,4 +4,6 @@ class Product < ApplicationRecord
   has_one_attached :uploaded_image
   belongs_to :user
   
+  
+  
 end

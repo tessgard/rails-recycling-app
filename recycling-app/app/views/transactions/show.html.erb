@@ -1,0 +1,8 @@
+
+<h3>Details</h3>
+      
+    <p>category: <%= @transaction.product.category %></p>
+    <p>Quantity: <%= @transaction.product.quantity %></p>
+    <p>Location: <%= @transaction.product.location %></p>
+     <p>Time: <%= @transaction.created_at %></p>
+     <%= image_tag @transaction.product.uploaded_image, class: 'image-size' %>
