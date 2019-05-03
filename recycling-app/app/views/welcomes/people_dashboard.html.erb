@@ -7,7 +7,7 @@
 				<% @products.each_with_index do |product, index| %>
         <div class="user-dash-card">
         <div class="card-top-box">
-        <div class="marketplace-product-card-image">   
+        <div class="dash-product-card-image">   
             <%= image_tag product.uploaded_image, class: 'marketplace-image-size' %>
         </div>
         </div>
@@ -15,7 +15,13 @@
         <div class="card-info">
         <p>category: <%= product.category %></p>
 
-        <div class="gen-button"><%= button_to "details", product_path(product.id), method: :get %></div>
+				<div class="dashboard-buttons-row">
+					<div class="gen-button"><%= button_to "details", product_path(product.id), method: :get %></div>
+					<div class="gen-button"><%= button_to "edit", edit_product_path(product.id), method: :get %></div>
+					<div class="gen-button"><%= button_to 'delete', product_path(product.id),
+													method: :delete,
+													data: { confirm: 'Are you sure?' } %></div>
+				</div>
 
         </div>
 

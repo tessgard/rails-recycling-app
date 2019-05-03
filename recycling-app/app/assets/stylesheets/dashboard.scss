@@ -89,6 +89,14 @@ a {
   align-items: center;
 }
 
+.dash-product-card-image {
+  width: 200px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .marketplace-image-size{
   width: 190px;
@@ -101,11 +109,11 @@ a {
 }
 .user-dash-card {
   width: 210px;
-  height: 410px;
+  height: 350px;
   background: white;
   color: green;
   margin: 10px 10px;
-  border-bottom: 1pt solid green;
+  border: 1pt solid green;
   a {
     color: green;
   }
@@ -115,4 +123,11 @@ a {
   width: 90%;
   padding-left: 10px;
   font-size: 10pt;
+}
+
+.dashboard-buttons-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }

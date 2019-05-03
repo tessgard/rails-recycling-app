@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root "welcomes#index"
   resources :transactions
   resources :charges
+  # resources :products
   get '/', to: "welcomes#index"
 
   get "/products", to: "products#index", as: "products"

@@ -3,6 +3,7 @@
     <div class="registration-form-content">
 
       <h2>Sign up</h2>
+      <p>Individual</p>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
@@ -34,6 +35,9 @@
         </div>
         </div>
       <% end %>
+      <p>already have an account?</p>
+       <%= render "users/shared/links" %>
+
     </div>
   </div>
 </div>

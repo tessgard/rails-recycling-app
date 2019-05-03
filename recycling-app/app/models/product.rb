@@ -22,4 +22,6 @@ class Product < ApplicationRecord
       image_name
   end
 
+  
+
 end

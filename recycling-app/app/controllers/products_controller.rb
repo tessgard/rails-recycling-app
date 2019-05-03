@@ -47,10 +47,17 @@ class ProductsController < ApplicationController
   end
 
   def delete
+
     @product = Product.find(params[:id])
-    @product.destroy
+    if @product.user == current_user
+
+      @product.destroy
    
-    redirect_to products_path
+      redirect_to user_dashboard_path
+    else
+      redirect_to product_path
+    end
+
   end
 
   def cart
