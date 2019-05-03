@@ -1,6 +1,5 @@
 .image-size {
   width: 300px;
-  border: 1pt solid green;
 
 }
 
@@ -9,8 +8,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
-
 }
 
 .shownew-content {
@@ -19,4 +16,12 @@
   border: 10pt solid green;
   padding: 30px 30px;
   background: white;
+}
+
+.button-image-upload {
+  width: 40px;
+}
+
+.button-image-upload input{
+  margin-top: 10px;
 }
