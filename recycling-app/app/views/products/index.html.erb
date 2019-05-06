@@ -1,12 +1,54 @@
 <div class="marketplace-main-container">
 
-  <div class="marketplace-content">
 
-    <h1>Marketplace</h1>
+<div class="marketplace-content">
+<div class="marketplace-sidebar">
+<h1>Marketplace</h1>
+
+<div class="see-more-link"><p><%= link_to 'Show all products', products_path %></p></div>
+<p>_______________</p>
+
+<p>Filter by category</p>
+
+  <form action="<%= products_filtered_category_path %>" method="POST" >
+  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+
+    <input type="radio" name="category" value="Glass" > Glass<br>
+    <input type="radio" name="category" value="Textile" > Textile<br>
+    <input type="radio" name="category" value="PET Plastic" > PET Plastic<br>
+    <input type="radio" name="category" value="Textile" > Textile<br>
+    <input type="radio" name="category" value="Cardboard" > Paper or Cardboard<br>
+    <input type="radio" name="category" value="Batteries" > Batteries<br>
+    <input type="radio" name="category" value="Aluminium" > Aluminium<br>
+    <div class="gen-button-sidebar"><input type="submit" value="filter" /></div>
+  </form>
+  <p>_______________</p>
+
+  <p>Filter by location</p>
+
+  <form action="<%= products_filtered_location_path %>" method="POST" >
+  <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+
+    <input type="radio" name="location" value="SA" > SA<br>
+    <input type="radio" name="location" value="WA" > WA<br>
+    <input type="radio" name="location" value="QLD" > QLD<br>
+    <input type="radio" name="location" value="VIC" > VIC<br>
+    <input type="radio" name="location" value="TAS" > TAS<br>
+    <input type="radio" name="location" value="NSW" > NSW<br>
+    <input type="radio" name="location" value="NT" > NT<br>
+    <input type="radio" name="location" value="ACT" > ACT<br>
+    <div class="gen-button-sidebar"><input type="submit" value="filter" /></div>
+  </form>
+
   </div>
+
+
+
     <div class="all-items-container">
 
     
+
+
       <% @products.each_with_index do |product, index| %>
         <div class="marketplace-card">
         <div class="card-top-box">
@@ -28,5 +70,5 @@
     </div>
     
   
-
+</div>
 </div>

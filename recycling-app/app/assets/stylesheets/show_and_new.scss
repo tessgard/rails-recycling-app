@@ -25,3 +25,15 @@
 .button-image-upload input{
   margin-top: 10px;
 }
+
+#custom-stripe-btn {
+  margin-top: 10px;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: green;
+  border: 1pt solid green;
+  padding: 7px 7px;
+  font-size: 13pt;
+}

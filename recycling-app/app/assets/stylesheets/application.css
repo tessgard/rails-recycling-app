@@ -42,6 +42,22 @@
     text-decoration: none;
 }
 
+.gen-button-sidebar input {
+  margin-top: 5px;
+  background: transparent;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: green;
+  border: 1pt solid green;
+  padding: 4px 4px;
+  font-size: 10pt;
+}
+
+.gen-buttonsidebar input a {
+    color: green;
+    text-decoration: none;
+}
 
 
 .gen-button-white input {

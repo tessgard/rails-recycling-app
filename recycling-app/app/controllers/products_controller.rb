@@ -60,6 +60,19 @@ class ProductsController < ApplicationController
 
   end
 
+  def filter_cat
+    category = params[:category]
+    @products = Product.where(category: category)
+    render 'index'
+  end
+
+  def filter_loc
+    location = params[:location]
+    @products = Product.where(location: location)
+    render 'index'
+  end
+
+
   def cart
     @product = Product.find(params[:id])
   end

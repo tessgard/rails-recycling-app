@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/', to: "welcomes#index"
 
   get "/products", to: "products#index", as: "products"
+
   post "/products", to: "products#create"
   get "/products/new", to: "products#new", as: "new_product"
   get "/products/:id", to: "products#show", as: "product"
@@ -25,5 +26,8 @@ Rails.application.routes.draw do
   get "/signup", to:"welcomes#signup"
   get "/my_dashboard", to:"welcomes#people_dashboard"
   get "/users", to: "welcomes#people_dashboard"
+
+  post "/products/filtered/category", to: "products#filter_cat"
+  post "/products/filtered/location", to: "products#filter_loc"
 
 end
