@@ -22,6 +22,13 @@ class Product < ApplicationRecord
       image_name
   end
 
-  
+  def postage_calc
+    if self.quantity < 5
+      postage = 8.90
+    else
+      postage = 8.90 + (self.quantity-5)
+    end
+    return postage
+  end
 
 end
