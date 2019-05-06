@@ -16,8 +16,8 @@ class Product < ApplicationRecord
         image_name = "pet.jpg"
       elsif self.category == "Batteries"
         image_name = "batteries.jpg"
-      elsif self.category == "Alluminium"
-        image_name = "alluminium.jpg"
+      elsif self.category == "Aluminium"
+        image_name = "aluminium.jpg"
       end
       image_name
   end
@@ -29,6 +29,12 @@ class Product < ApplicationRecord
       postage = 8.90 + (self.quantity-5)
     end
     return postage
+  end
+
+  def glass
+    if self.category == "Glass"
+      return self
+    end
   end
 
 end
