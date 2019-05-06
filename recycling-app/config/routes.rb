@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :businesses, path: 'businesses', controllers: { sessions: "businesses/sessions"}
+  devise_for :businesses, path: 'businesses', controllers: { sessions: "businesses/sessions", registrations: "businesses/registrations"}
   devise_for :users, path: 'users', controllers: { sessions: "users/sessions", registrations: "users/registrations"}
 
   root "welcomes#index"
@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/', to: "welcomes#index"
 
   get "/products", to: "products#index", as: "products"
+  get "/businesses/registrations/error", to: "welcomes#error"
+
 
   post "/products", to: "products#create"
   get "/products/new", to: "products#new", as: "new_product"

@@ -41,5 +41,14 @@
     </div>
   </div>
 </div>
+<script>
+const signupButton = document.querySelector('#submit-btn')
+signupButton.addEventListener('click', (e) => {
+  setTimeout(() => {
+    signupButton.removeAttribute('disabled')
+    document.body.prepend('Passwords do not match, please try again')
+  }, 200)
+})
+</script>
 
 

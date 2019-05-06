@@ -3,19 +3,22 @@
 class Businesses::RegistrationsController < Devise::RegistrationsController
   include Accessible
   skip_before_action :check_user, except: [:new, :create]
-
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    super
+  end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    result = check_passwords
+    if result == false
+      return nil
+    end 
+    super
+  end
 
   # GET /resource/edit
   # def edit
@@ -42,6 +45,17 @@ class Businesses::RegistrationsController < Devise::RegistrationsController
   # end
 
   # protected
+  def check_passwords
+    if params["business"]["password"] != params["business"]["password_confirmation"]
+      return false
+    else 
+      return true
+    end 
+  end 
+  
+  def after_sign_up_path_for(resource)
+    business_dashboard_path
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params

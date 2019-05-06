@@ -21,6 +21,7 @@ class WelcomesController < ApplicationController
     redirect_to my_dashboard_path
     super
   end
-
+  def error 
+  end 
 end
 

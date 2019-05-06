@@ -5,6 +5,12 @@ class Business < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :products
   has_many :transactions
+  # validate :password_must_match
+
+# def password_must_match
+  # raise
+    # errors.add(:password, "doesn't match confirmation") if password != password_confirmation
+# end
 
   def destroy
     update_attributes(deactivated: true) unless deactivated

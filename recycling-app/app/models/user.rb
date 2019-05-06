@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :products
   has_many :transactions
 
+
 def destroy
     update_attributes(deactivated: true) unless deactivated
 end

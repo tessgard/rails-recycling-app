@@ -1,4 +1,6 @@
-class AddBusinessesTable < ActiveRecord::Migration[5.2]
+# frozen_string_literal: true
+
+class DeviseCreateBusinesses < ActiveRecord::Migration[5.2]
   def change
     create_table :businesses do |t|
       ## Database authenticatable
@@ -40,4 +42,3 @@ class AddBusinessesTable < ActiveRecord::Migration[5.2]
     # add_index :businesses, :unlock_token,         unique: true
   end
 end
-
