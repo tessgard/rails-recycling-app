@@ -3,8 +3,10 @@
   <p>Past orders</p>
 	<% @transactions.each_with_index do |transaction, index| %>
            
-          <%= transaction.product_id %>
-				<%= link_to "show", transaction_path(transaction.id) %>   <br/><br/>  
+        <p>Transaction number: <%= transaction.id %></p>
+				<p>Time and Date of transaction: <%= transaction.created_at %></p>
+				<%= link_to "show", transaction_path(transaction.id) %>  
+				<p>___________________________</p>
 
       <% end %> 
 	</div>
