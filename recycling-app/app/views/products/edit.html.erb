@@ -1,0 +1,58 @@
+<div class="shownew-main-container">
+  <div class="shownew-content">
+
+    <h3>Edit you item</h3>
+    <form action="<%= product_path(params[:id]) %>" method="POST" enctype="multipart/form-data" >
+        <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+        <input type="hidden" name="_method" value="patch" />
+
+        <% if @product.errors.any? %>
+        <div id="error_explanation">
+            <h2>
+            <%= pluralize(@product.errors.count, "error") %> prohibited
+            this article from being saved:
+            </h2>
+            <ul>
+            <% @product.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+            </ul>
+        </div>
+        <% end %>
+
+        
+        <div class="form_row">
+            <label for="category">Category:</label><br/>
+            <br><%= radio_button_tag 'category', 'Glass', true %> Glass
+            <br><%= radio_button_tag 'category', 'Cardboard' %> Paper or Cardboard
+            <br><%= radio_button_tag 'category', 'Textile' %> Textile
+            <br><%= radio_button_tag 'category', 'PET Plastic' %> PET plastic
+            <br><%= radio_button_tag 'category', 'Batteries' %> Batteries
+            <br><%= radio_button_tag 'category', 'Alluminium' %> Alluminium
+        </div>
+    <br>
+        <label for="quantity">weight in kg</label>
+        <input type="number" name="quantity" id="quantity" value="<%= @product.quantity %>"><br/><br/>
+
+        <label> Image upload</label>
+        <div class="button-image-upload"><input type ="file" name = "uploaded_image" accept ="image/jpg"></div>
+        <br/><br/>
+
+    <div class="form_row">
+        <label for="location">Location:</label><br/>
+        <br><%= radio_button_tag 'location', 'New South Wales', true %> NSW
+        <br><%= radio_button_tag 'location', 'Queensland ' %> QLD 
+        <br><%= radio_button_tag 'location', 'South Australia' %> SA
+        <br><%= radio_button_tag 'location', 'Tasmania' %> TAS
+        <br><%= radio_button_tag 'location', 'Victoria' %> VIC
+        <br><%= radio_button_tag 'location', 'Western Australia' %> WA
+
+        </div>
+
+        <div class="gen-button"><input type="submit" value="Update" /></div>
+
+    </form>
+
+ </div>
+
+</div>

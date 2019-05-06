@@ -4,12 +4,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+   a{
+     color: white;
+   }
+   p{
+     margin-top: 0;
+   }
+   h2 {
+     margin-bottom: 2px;
+   }
 }
 
 .registration-form-content-container {
   background: green;
-  height: 400px;
-  width: 400px;
+  height: 600px;
+  width: 600px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -32,6 +41,7 @@
 .submit-button-container {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 15px;
 }
 
 .sign-up-submit-button input {
@@ -43,6 +53,7 @@
   color: white;
   border: 1pt solid white;
   padding: 7px 7px;
+  font-size: 14pt;
     a {
       color: white;
       text-decoration: none;

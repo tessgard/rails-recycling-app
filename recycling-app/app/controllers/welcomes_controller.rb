@@ -9,6 +9,8 @@ class WelcomesController < ApplicationController
     @user = current_user
     @products = Product.where(user_id: current_user.id)
   end 
+
+  
   def business_dashboard
     @business = current_business
     
@@ -21,3 +23,4 @@ class WelcomesController < ApplicationController
   end
 
 end
+

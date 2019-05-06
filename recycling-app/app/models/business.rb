@@ -5,4 +5,13 @@ class Business < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :products
   has_many :transactions
+
+  def destroy
+    update_attributes(deactivated: true) unless deactivated
+end
+
+def active_for_authentication?
+  super && !deactivated
+end
+
 end

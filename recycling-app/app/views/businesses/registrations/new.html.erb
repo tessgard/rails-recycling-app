@@ -3,6 +3,7 @@
     <div class="registration-form-content">
 
       <h2>Sign up</h2>
+      <p>Business</p>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
@@ -33,6 +34,8 @@
         </div>
         </div>
       <% end %>
+      <p>already have an account?</p>
+       <%= render "users/shared/links" %>
     </div>
   </div>
 </div>
