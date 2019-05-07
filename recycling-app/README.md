@@ -225,7 +225,7 @@ Things you may want to cover:
         ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/sign_up.png "Sign up")
         ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/user_dash.png "User Dashboard")
         ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/new_product.png "New product")
-        ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/marketplace.png "Marketplace")
+        ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/Marketplace.png "Marketplace")
       
 17) Allocated and tracked tasks:
         Tasks are allocated using trello and it is allocated according to each team member. Every time each task is completed, it is moved to "Done" column.
