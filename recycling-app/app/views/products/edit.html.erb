@@ -1,6 +1,7 @@
 <div class="shownew-main-container">
   <div class="shownew-content">
 
+    <% if can? :update, product %>
     <h3>Edit you item</h3>
     <form action="<%= product_path(params[:id]) %>" method="POST" enctype="multipart/form-data" >
         <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
@@ -18,6 +19,7 @@
             <% end %>
             </ul>
         </div>
+        <% end %>
         <% end %>
 
         
