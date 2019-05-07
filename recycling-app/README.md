@@ -221,7 +221,11 @@ Things you may want to cover:
         Story 2: As a user(Business), I want to buy more than one product at the same time by adding them to the cart and paying only once the total amount.
 
 16) Wireframes: 
-        <img src="glass.jpg"/>
+        ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/landing_page.png "Landing Page")
+        ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/sign_up.png "Sign up")
+        ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/user_dash.png "User Dashboard")
+        ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/new_product.png "New product")
+        ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/marketplace.png "Marketplace")
       
 17) Allocated and tracked tasks:
         Tasks are allocated using trello and it is allocated according to each team member. Every time each task is completed, it is moved to "Done" column.
