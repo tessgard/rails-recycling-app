@@ -13,8 +13,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
+    result = check_passwords
+    if result == false
+      return nil
+    end 
     super
-    # raise
   end
   
   # GET /resource/edit
@@ -42,6 +45,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # protected
+
+  def check_passwords
+    if params["user"]["password"] != params["user"]["password_confirmation"]
+      return false
+    else 
+      return true
+    end 
+  end 
+  
+  def after_sign_up_path_for(resource)
+    user_dashboard_path
+  end
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
