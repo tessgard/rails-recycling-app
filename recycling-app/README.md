@@ -3,7 +3,7 @@
 ************************
 ###### GitHub Repo: 
 
-(https://github.com/tessgard/rails-recycling-app)
+https://github.com/tessgard/rails-recycling-app
 
 
 
