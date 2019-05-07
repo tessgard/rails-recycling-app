@@ -221,7 +221,7 @@ Things you may want to cover:
         Story 2: As a user(Business), I want to buy more than one product at the same time by adding them to the cart and paying only once the total amount.
 
 16) Wireframes: 
-        Wire
+        <img src="glass.jpg"/>
       
 17) Allocated and tracked tasks:
         Tasks are allocated using trello and it is allocated according to each team member. Every time each task is completed, it is moved to "Done" column.
