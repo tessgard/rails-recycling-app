@@ -6,8 +6,7 @@
       <p>Individual</p>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-
-        <%= render "devise/shared/error_messages", resource: resource %>
+      <%= render "devise/shared/error_messages", resource: resource %>
 
         <div class="field">
           <%= f.label :email %><br />
@@ -29,7 +28,7 @@
 
         <div class="submit-button-container">
         <div class="actions">
-          <div class="sign-up-submit-button"><%= f.submit "submit" %>
+          <div class="sign-up-submit-button"><%= f.submit "submit", id: 'submit-btn' %>
           </div>
           <input type="hidden" name="target" value="/dashboard"/>
         </div>
@@ -37,7 +36,6 @@
       <% end %>
       <p>already have an account?</p>
        <%= render "users/shared/links" %>
-
     </div>
   </div>
 </div>
@@ -50,5 +48,3 @@ signupButton.addEventListener('click', (e) => {
   }, 200)
 })
 </script>
-
-
