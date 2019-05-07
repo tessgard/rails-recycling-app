@@ -1,37 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-*************************************************
-1) Need for the Project:  
+ 
+### Need for the Project:  
         Recycling is the method in which a used product can be converted into a  different-usable product. But not always the products labelled as recycle are recycled. Most of the time they end up in landfill This Project "irecycle" is a portal to connect people who wanted to donate their products to businesses, which recycle these products and make them into something better. 
           
-2) Problem Addressed: 
+
+### Problem Addressed: 
         Recycling of products is under-rated, many don't care about recycling and even if they did, they don't follow through to see if their products are actually recycled. This project "irecycle" is mainly for the people who care to recycle their product. They can post their products in the portal and the business can buy from them. This way people can check if their products have actually been recycled instead of filling in the landfill
 
-3) Project Description:
+
+### Project Description:
         irecycle: The goal of this project is connect people who have things that can be recycled with business who recycle. People can simply signup in our website and can create posts of their project, they can attach images if they have and this information will be displayed in the market place, where the businesses can signup and view and purchase the products. After the business purchases the product, the customer can mail their products to the respective business address. Thus they can make sure that their products are actually recycled and not sumped in landfill
 
-4) Network Infrastructure:
+
+### Network Infrastructure:
         Networking Hardware:
           Routers
           Switches
@@ -52,7 +34,8 @@ Things you may want to cover:
           Wireless protocols
           IP addressing
 
-5) Software Used:
+
+### Software Used:
         Software to be used in the App are HTML5, CSS and ruby on rails version 2.5.1. 
 
         Ruby on Rails: 
@@ -62,10 +45,12 @@ Things you may want to cover:
         CSS:
           It is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
 
-6) Database Used:
+
+### Database Used:
         Database used was postgreSQL. It is an open source DBMS.  It can handle workloads ranging from single-machine applications to Web services or data warehousing with many concurrent users. It is the default database for macOS Server. It is ACID-compliant and transactional. It offers support for RDBMS features such as updatable and materialized views, triggers, foreign keys; functions and stored procedures.
 
-7) Production database setup for postgresql:
+
+### Production database setup for postgresql:
         Hostname :  This is the hostname or IP address of your database server.  
         Port  : This is the PostgreSQL port. If you didn't change the port when you installed Postgres, it will default to 5432.
         Database name : This is the name of your confluence database. 
@@ -77,7 +62,8 @@ Things you may want to cover:
               username: recycling-app
               password: <%= ENV['RECYCLING-APP_DATABASE_PASSWORD'] %>
 
-8) Architecture of the App:
+
+### Architecture of the App:
         We used MVC Architecture. MVC stands for Model, View and Controller. MVC separates application into three components - Model, View and Controller.
 
         Model: Model represents shape of the data and business logic. It maintains the data of the application. Model objects retrieve and store model state in a database.
@@ -92,14 +78,16 @@ Things you may want to cover:
 
           Controller is a request handler.
 
-9) Abstractions in the App:
+
+### Abstractions in the App:
           Ruby on Rails: It provides a complete abstraction layer to build with. 
           
           ActiveRecord: SQL is used to communicate with databases, but Rails provides an alternative library, ActiveRecord, to generate the SQL. ActiveRecord does not form a complete abstraction layer since there are useful database actions it cannot do. So we needed both ActiveRecord for concise and clear code, and SQL for advanced queries.
           
           Domain name: The URL on the Internet is another abstraction layer, enabling an alphabetic name to be converted into the numeric IP address of the Web server.
 
-10) Third party services used in our App: 
+
+### Third party services used in our App: 
           The third party services that were used include,
           Stripe: Stripe is a global online payment processor that is trusted by thousands of businesses across the globe
 
@@ -107,16 +95,19 @@ Things you may want to cover:
 
           AWS:Amazon Web Services (AWS) is a secure cloud services platform, offering compute power, database storage, content delivery and other functionality to help businesses scale and grow.
 
-11) Data structure of Market place:
+
+### Data structure of Market place:
         The Products in the market place can be filtered using the categories and using location. User can also view all products and select from the display. All the products uploaded by the users are displayed and as and when the products are purchased, they are removed from the market place.
 
-12) Database Relationship:
+
+### Database Relationship:
         Business table has many products and transactions.
         Products table belongs to user and has foreign key for user and business.
         Users table has many products and transactions.
         Transactions belong to user,business and product and has foreign key for business and user.
 
-13) Relationship Model: 
+
+### Relationship Model: 
         Businesses:   has_many :products
                       has_many :transactions
 
@@ -133,7 +124,8 @@ Things you may want to cover:
                       belongs_to :business
                       belongs_to :product
 
-14) Database Schema Design:
+
+### Database Schema Design:
         ActiveRecord::Schema.define(version: 2019_05_03_015053) do
 
           # These are extensions that must be enabled in order to support this database
@@ -216,35 +208,62 @@ Things you may want to cover:
           add_foreign_key "transactions", "users"
         end
 
-15) User Stories:
+
+### User Stories:
         Story 1: As a user(Individual), I want to upload more than one product at the same time.
         Story 2: As a user(Business), I want to buy more than one product at the same time by adding them to the cart and paying only once the total amount.
 
-16) Wireframes: 
-        ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/landing_page.png "Landing Page")
-        ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/sign_up.png "Sign up")
-        ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/user_dash.png "User Dashboard")
-        ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/new_product.png "New product")
-        ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/Marketplace.png "Marketplace")
+
+### Wireframes: 
+#### Figma screen grabs
+
+##### Landing Page
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/landing_page.png "Landing Page")
+
+##### Sign up
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/sign_up.png "Sign up")
+
+##### User Dashboard
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/user_dash.png "User Dashboard")
+
+##### New Product
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/new_product.png "New product")
+
+##### Marketplace
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/Marketplace.png "Marketplace")
       
-17) Allocated and tracked tasks:
+
+### Allocated and tracked tasks:
         Tasks are allocated using trello and it is allocated according to each team member. Every time each task is completed, it is moved to "Done" column.
 
-18) Agile methodology implemented in the project:
+
+### Agile methodology implemented in the project:
         We communicated with each other everyday in person, slack and git hub. Everytime we finish our task,we push it to git hub for the other person to check and commit changes. We worked as a team. Task for each person was allocated using trello, thus we both know what need to be done even if the other person is not around.
 
-19) Source control Process:
+
+### Source control Process:
         Git is a source control system that keep track of the changes in your computer files and you may work together with multiple people. We used 
         command line interface to achieve this. Github is one of the online project hosting that use Git. A new repository with the name: recycling-app was created and everytime a change is done in any part of the program a new branch is created in github and the file with the changes is pushed to that branch. Once the changes are confirmed to work, the branch is merged with the master branch unless there is a conflict. If there is a conflict, then who ever has pushed the changes last, will have to fix the conflict and push again. So when the other person wanted to work will pull the project and any change made can be pulled and they can work on it, as long as they don't have any changes that they haven't commited and pushed. Else they will have to stash it and pull again. 
  
-20) Testing process:
 
-21) Information system security:
+### Testing process:
+        Testing process was not systematic, as we coded we checked our code was working on local server. Setting up test user logins and testing all features before commiting changes and pushing to GitHub.
+        User testing sessions were run with non coding users which brought up some edge cases such as: 
+                - there was an error raised if a product was created without an image
+                - devise password validation was not working as it should
+                - the was a state missing in the list of available locations
+                - when items were "bought" in the marketplace they stayed available when they should become unavailable
+        After the user testing session we were able to work on the above errors to ensure that our app was bug free.
+
+
+### Information system security:
         Http is a stateless protocol and sessions make it stateful. A session ususally has hash of values and session ID and every cookie sent to the client's browser has a session ID and it is destroyed once the user logs out. Thus, the cookie serves as a temporary authentication for the web application. For this to hold, the user has to signup with user name and password and then the session ID is generated using SecureRandom.hex.
 
-22) Methods used to protect information and data: 
+
+### Methods used to protect information and data: 
         To help prevent Cross-Site Scripting, we need to sanitise input which can be achieved by Model View Controller design.  Any data stored or retrieved from a database should pass through a Model, so this is a great place to sanitise our stored data. Using Active Record Validations within our models we can ensure that data is present and/or in a specific format. We can also sanitise input/output within the View using the sanitize method. It will encode all html tags and stripe all attributes that aren't specifically allowed. String output in the view are automatically encoded.
         Cross-Site Request Forgery attack can be prevented using authenticity_token.
 
-23) Legal obligations: 
+
+### Legal obligations: 
         Care should taken that the personal information from customer should not be illegally disclosed or stolen. So we should collect only the required information from the customers. Once it is no longer needed it should be destroyed. The user's personal information has to be shared only on a need to know basis. All the software has to be up-to-date and should have proper anti-virus software. Password protection should be strong.
