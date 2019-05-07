@@ -1,6 +1,12 @@
 # README
 
- 
+************************
+###### GitHub Repo: 
+<a href src="https://github.com/tessgard/rails-recycling-app">
+
+
+
+
 ### Need for the Project:  
         Recycling is the method in which a used product can be converted into a  different-usable product. But not always the products labelled as recycle are recycled. Most of the time they end up in landfill This Project "irecycle" is a portal to connect people who wanted to donate their products to businesses, which recycle these products and make them into something better. 
           
