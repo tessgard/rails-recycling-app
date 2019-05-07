@@ -27,6 +27,9 @@ class ChargesController < ApplicationController
       product_id: product_id,
       business_id: business_id
     })
+    product = Product.find(product_id)  
+    product.state = false
+    product.save
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
