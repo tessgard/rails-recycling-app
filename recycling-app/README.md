@@ -1,9 +1,11 @@
 # README
 
 ************************
-###### GitHub Repo: 
+###### Deployed App: 
+https://i-recycle.herokuapp.com/
 
-https://github.com/tessgard/rails-recycling-app
+###### GitHub Repo: 
+https://github.com/tessgard/rails-recycling-app/
 
 
 
