@@ -28,6 +28,8 @@
             <p class="nav-item3"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></p>
         <% elsif business_signed_in? %>
             <p class="nav-item3"><%= link_to 'Log out', destroy_business_session_path, method: :delete %></p>
+        <% elsif admin_signed_in? %>
+            <p class="nav-item3"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></p>
         <% else %>
           <p class="nav-item3"><%= link_to 'Log In', login_path %></p>
           <p class="nav-item3"><%= link_to 'Sign Up', signup_path %></p>

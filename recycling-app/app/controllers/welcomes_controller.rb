@@ -24,6 +24,12 @@ class WelcomesController < ApplicationController
     redirect_to my_dashboard_path
     super
   end
+  def admin_dashboard
+      @users = User.all
+      @businesses = Business.all
+
+  end
+  
   def error 
   end 
 end
