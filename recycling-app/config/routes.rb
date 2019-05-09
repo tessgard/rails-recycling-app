@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get "/signup", to:"welcomes#signup"
   get "/my_dashboard", to:"welcomes#people_dashboard"
   get "/users", to: "welcomes#people_dashboard"
+  get "/about", to: "welcomes#about"
 
   post "/products/filtered/category", to: "products#filter_cat"
   post "/products/filtered/location", to: "products#filter_loc"

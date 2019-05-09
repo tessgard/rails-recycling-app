@@ -29,6 +29,9 @@
   h1 {
     font-size: 25pt;
   }
+  a {
+    color: rgb(68, 121, 49);
+  }
 }
 
 .all-items-container {
@@ -61,10 +64,10 @@
 .marketplace-card {
   width: 210px;
   height: 410px;
-  background: green;
+  background: rgb(68, 121, 49);
   color: white;
   margin: 10px 10px;
-  border: 1pt solid green;
+  border: 1pt solid rgb(68, 121, 49);
   a {
     color: white;
   }
@@ -75,3 +78,4 @@
   padding-left: 10px;
   font-size: 10pt;
 }
+
