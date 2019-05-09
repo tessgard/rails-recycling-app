@@ -8,6 +8,6 @@
 # puts "Start of Seeding..."
 
 puts 'Creating an admin user'
-User.new({ :email => 'admin@admin.com.au', :password => 'password321', :password_confirmation => 'password321', :admin => 'true'}).save
+Admin.new({ :email => 'admin@admin.com.au', :password => 'password321', :password_confirmation => 'password321'}).save
 
 puts "Seeding Over"

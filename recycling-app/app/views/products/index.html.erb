@@ -50,6 +50,7 @@
 
 
       <% @products.each_with_index do |product, index| %>
+      <% if product.state %>
         <div class="marketplace-card">
         <div class="card-top-box">
         <div class="marketplace-product-card-image">   
@@ -64,7 +65,8 @@
 
         </div>
 
-        </div>              
+        </div>   
+        <% end %>           
       <% end %>
 
     </div>

@@ -1,0 +1,32 @@
+<div class="user-dash-main-container">
+	<div class="user-dash-left-container">
+    <% if can? :read, :all %>
+        <div >
+        <% @users.each_with_index do |user, index| %> 
+				<p> ----------</p>
+				<p> Individual </p>
+				<p> ----------</p>
+        <p> Name: <%= user.name %></p> 
+        <p>Id: <%= user.id %></p>
+        <p>Email: <%= user.email %></p>
+				<% user.products.each do |product| %>
+				<p> Category: <%= product.category %></p> 
+				<%= image_tag product.uploaded_image, class: 'marketplace-image-size'%>
+				<% end %>   	  
+      <% end %>
+			<% @businesses.each_with_index do |business, index| %> 
+					<p> ----------</p>
+        	<p> Business </p>
+					<p> ----------</p>
+        <p>Id: <%= business.id %></p>
+        <p>Email: <%= business.email %></p>
+				<% business.transactions.each do |transaction,index| %>
+      	<p>Transaction number: <%= transaction.id %></p>
+				<p>Time and Date of transaction: <%= transaction.created_at %></p>
+				<%= link_to "show", transaction_path(transaction.id) %>  
+			<% end %>
+			<% end %>
+				<% end %>
+				</div>
+	</div>
+</div>

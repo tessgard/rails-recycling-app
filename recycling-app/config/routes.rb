@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins, paths: 'admins', controllers: { sessions: "businesses/sessions"}
   devise_for :businesses, path: 'businesses', controllers: { sessions: "businesses/sessions", registrations: "businesses/registrations"}
   devise_for :users, path: 'users', controllers: { sessions: "users/sessions", registrations: "users/registrations"}
 
@@ -32,5 +33,5 @@ Rails.application.routes.draw do
 
   post "/products/filtered/category", to: "products#filter_cat"
   post "/products/filtered/location", to: "products#filter_loc"
-
+  get "/admin", to: "welcomes#admin_dashboard"
 end
