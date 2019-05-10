@@ -7,6 +7,14 @@ https://i-recycle.herokuapp.com/
 ###### GitHub Repo: 
 https://github.com/tessgard/rails-recycling-app/
 
+### Planning
+
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/Trello1.png "Trello")
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/Trello2.png "Trello")
+
+
+
+
 
 
 
@@ -57,6 +65,8 @@ https://github.com/tessgard/rails-recycling-app/
 
 ### Database Used:
         Database used was postgreSQL. It is an open source DBMS.  It can handle workloads ranging from single-machine applications to Web services or data warehousing with many concurrent users. It is the default database for macOS Server. It is ACID-compliant and transactional. It offers support for RDBMS features such as updatable and materialized views, triggers, foreign keys; functions and stored procedures.
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/database.png "Database")
+
 
 
 ### Production database setup for postgresql:
