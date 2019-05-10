@@ -34,4 +34,5 @@ Rails.application.routes.draw do
   post "/products/filtered/category", to: "products#filter_cat"
   post "/products/filtered/location", to: "products#filter_loc"
   get "/admin", to: "welcomes#admin_dashboard"
+  get "/contact", to: "welcomes#contact"
 end
