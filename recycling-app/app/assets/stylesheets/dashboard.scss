@@ -130,5 +130,54 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.admin-main-main {
+  display: flex;
+  justify-content: center;
+}
+
+.admin-dash-main-container {
+  width: 60%;
+  min-height: 700px;
+  align-content: center;
+  margin-top: 40px;
+  height: 500px;
+  border: 10pt solid rgb(22, 33, 57);
+  display: flex;
+  overflow:hidden;
+height:1%;
+}
+
+.admin-dash-left {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 17px 17px;
+}
+
+.admin-dash-right {
+  width: 45%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 17px 17px;
+  
+}
+
+.admin-dash-card {
+  width: 200px;
+  border: 1pt solid rgb(68, 121, 49);
+  background: white;  
+  padding: 10px 10px;
+  margin: 15px 15px;
+   h6 {
+     margin-top: 3px;
+     margin-bottom: 0px;
+     font-size: 15px;
+   }
+
 
 }

@@ -1,32 +1,59 @@
-<div class="user-dash-main-container">
-	<div class="user-dash-left-container">
-    <% if can? :read, :all %>
-        <div >
-        <% @users.each_with_index do |user, index| %> 
-				<p> ----------</p>
-				<p> Individual </p>
-				<p> ----------</p>
-        <p> Name: <%= user.name %></p> 
-        <p>Id: <%= user.id %></p>
-        <p>Email: <%= user.email %></p>
-				<% user.products.each do |product| %>
-				<p> Category: <%= product.category %></p> 
-				<%= image_tag product.uploaded_image, class: 'marketplace-image-size'%>
-				<% end %>   	  
-      <% end %>
-			<% @businesses.each_with_index do |business, index| %> 
-					<p> ----------</p>
-        	<p> Business </p>
-					<p> ----------</p>
-        <p>Id: <%= business.id %></p>
-        <p>Email: <%= business.email %></p>
-				<% business.transactions.each do |transaction,index| %>
-      	<p>Transaction number: <%= transaction.id %></p>
-				<p>Time and Date of transaction: <%= transaction.created_at %></p>
-				<%= link_to "show", transaction_path(transaction.id) %>  
-			<% end %>
-			<% end %>
+<div class="admin-main-main">
+	<div class="admin-dash-main-container">
+		<div class="admin-dash-left">
+			<% if can? :read, :all %>
+					
+					<h3> Individual users </h3>
+					
+					<% @users.each_with_index do |user, index| %> 
+					<div class="admin-dash-card">
+						<p> Name: <%= user.name %></p> 
+						<p>Id: <%= user.id %></p>
+						<p>Email: <%= user.email %></p>
+						<p>____________________________</p>
+						<h6>All posted items</h6>
+						<% user.products.each do |product| %>
+						<p>****************************</p>
+						<p> Category: <%= product.category %></p> 
+						<%= image_tag product.uploaded_image, class: 'marketplace-image-size'%>
+						<div class="dashboard-buttons-row">
+
+							<div class="gen-button"><%= button_to "details", product_path(product.id), method: :get %></div>
+							<div class="gen-button"><%= button_to "edit", edit_product_path(product.id), method: :get %></div>
+							<div class="gen-button"><%= button_to 'delete', product_path(product.id),
+														method: :delete,
+														data: { confirm: 'Are you sure?' } %></div>
+						</div>
+						
+						<% end %>   
+					</div>	  
+
 				<% end %>
-				</div>
+
+		</div>	
+
+		<div class="admin-dash-right">
+
+				<h3> Business users </h3>
+				<% @businesses.each_with_index do |business, index| %> 
+					<div class="admin-dash-card">	
+						<p>Id: <%= business.id %></p>
+						<p>Email: <%= business.email %></p>
+					<p>____________________________</p>
+						<h6>All transactions</h6>
+						<% business.transactions.each do |transaction,index| %>
+						<p>****************************</p>
+						<p>Transaction number: <%= transaction.id %></p>
+						<p>Time and Date of transaction: <%= transaction.created_at %></p>
+						<div class="gen-button"><%= button_to "details", transaction_path(transaction.id), method: :get %></div>
+						<% end %>
+					</div>
+				<% end %>
+					<% end %>
+		</div>
+					
+		
 	</div>
 </div>
+
+

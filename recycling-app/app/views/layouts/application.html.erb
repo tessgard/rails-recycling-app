@@ -14,7 +14,7 @@
     <div>
       <div class="nav-container3">
           <div class="nav-left">
-            <div class="logo-size"><img  src="/assets/i-recycle-logo.png" height="100"></div>
+            <div class="logo-size"><img  src="https://s3-ap-southeast-2.amazonaws.com/i-recycle-app/i-recycle-logo.png" height="100"></div>
           </div>
         <div class="nav-right">
       
@@ -28,12 +28,14 @@
 
 
         <% elsif business_signed_in? %>
-            <p class="nav-item3"><%= link_to 'Dashboard', business_dashboard_path %></p>
             <p class="nav-item3"><%= link_to 'Marketplace', products_path %></p>
+            <p class="nav-item3"><%= link_to 'Dashboard', business_dashboard_path %></p>
             <p class="nav-item3"><%= link_to 'Log out', destroy_business_session_path, method: :delete %></p>
 
 
         <% elsif admin_signed_in? %>
+            <p class="nav-item3"><%= link_to 'Marketplace', products_path %></p>
+            <p class="nav-item3"><%= link_to 'Dashboard', admin_path %></p>
             <p class="nav-item3"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></p>
         <% elsif %>
           <p class="nav-item3"><%= link_to 'Log In', login_path %></p>

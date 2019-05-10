@@ -7,17 +7,17 @@ class Product < ApplicationRecord
 
   def find_image_name
       if self.category == "Glass"
-        image_name = "glass.jpg"
+        image_name = "https://s3-ap-southeast-2.amazonaws.com/i-recycle-app/glass.jpg"
       elsif self.category == "Cardboard"
-        image_name = "cardboard.jpg"
+        image_name = "https://s3-ap-southeast-2.amazonaws.com/i-recycle-app/cardboard.jpg"
       elsif self.category == "Textile"
-        image_name = "textile.jpg"
+        image_name = "https://s3-ap-southeast-2.amazonaws.com/i-recycle-app/textile.jpg"
       elsif self.category == "PET Plastic"
-        image_name = "pet.jpg"
+        image_name = "https://s3-ap-southeast-2.amazonaws.com/i-recycle-app/pet.jpg"
       elsif self.category == "Batteries"
-        image_name = "batteries.jpg"
+        image_name = "https://s3-ap-southeast-2.amazonaws.com/i-recycle-app/batteries.jpg"
       elsif self.category == "Aluminium"
-        image_name = "aluminium.jpg"
+        image_name = "https://s3-ap-southeast-2.amazonaws.com/i-recycle-app/aluminium.jpg"
       end
       image_name
   end
