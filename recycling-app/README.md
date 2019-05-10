@@ -12,7 +12,7 @@ https://github.com/tessgard/rails-recycling-app/
 
 ### Planning
 
-![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/Trello3.png "Trello")
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/trello3.png "Trello")
 ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/Trello1.png "Trello")
 ![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/Trello2.png "Trello")
 
