@@ -7,6 +7,14 @@ https://i-recycle.herokuapp.com/
 ###### GitHub Repo: 
 https://github.com/tessgard/rails-recycling-app/
 
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/github.png "Github")
+
+
+### Planning
+
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/Trello3.png "Trello")
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/Trello1.png "Trello")
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/Trello2.png "Trello")
 
 
 
@@ -57,6 +65,8 @@ https://github.com/tessgard/rails-recycling-app/
 
 ### Database Used:
         Database used was postgreSQL. It is an open source DBMS.  It can handle workloads ranging from single-machine applications to Web services or data warehousing with many concurrent users. It is the default database for macOS Server. It is ACID-compliant and transactional. It offers support for RDBMS features such as updatable and materialized views, triggers, foreign keys; functions and stored procedures.
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/database.png "Database")
+
 
 
 ### Production database setup for postgresql:
@@ -276,3 +286,28 @@ https://github.com/tessgard/rails-recycling-app/
 
 ### Legal obligations: 
         Care should taken that the personal information from customer should not be illegally disclosed or stolen. So we should collect only the required information from the customers. Once it is no longer needed it should be destroyed. The user's personal information has to be shared only on a need to know basis. All the software has to be up-to-date and should have proper anti-virus software. Password protection should be strong.
+
+
+### Deployed app screengrabs
+Landing page
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/deployed-landing-page.png "landing page")
+Login 
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/deployed-login.png "login")
+About
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/deployed-about-page.png "About")
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/deployed-about-page-2.png "About")
+Individual user dashboard
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/deployed-user-dash.png "user dash")
+New post 
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/deployed-new-post2.png "new post")
+Show item 
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/deployed-show-item.png "show")
+Business dashboard
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/deployed-business-dash.png "business dash")
+Marketplace
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/deployed-marketplace.png "marketplace")
+Stripe pop-up
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/deployed-stripe.png "stripe")
+Admin user dashboard
+![alt text](https://github.com/tessgard/rails-recycling-app/blob/master/recycling-app/deployed-admin-dash.png "admin dash")
+
